@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Notivation</string>
+    <string name="title_activity_main">Notivation</string>
+    <string name="package_name">com.mindfulnotes.app</string>
+    <string name="custom_url_scheme">com.mindfulnotes.app</string>
+</resources>

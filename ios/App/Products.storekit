@@ -1,0 +1,485 @@
+{
+  "identifier" : "8A1E3B4F-2D5C-4A8E-9F01-ABCDEF123456",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "47.99",
+      "familyShareable" : false,
+      "internalID" : "6745230001",
+      "localizations" : [
+        {
+          "description" : "Lifetime access to all Pro features",
+          "displayName" : "Lifetime Pro",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Tüm Pro özelliklere ömür boyu erişim",
+          "displayName" : "Ömür Boyu Pro",
+          "locale" : "tr"
+        },
+        {
+          "description" : "Accès à vie à toutes les fonctionnalités Pro",
+          "displayName" : "Pro à vie",
+          "locale" : "fr"
+        },
+        {
+          "description" : "Lebenslanger Zugang zu allen Pro-Funktionen",
+          "displayName" : "Lebenslang Pro",
+          "locale" : "de"
+        },
+        {
+          "description" : "Acceso de por vida a todas las funciones Pro",
+          "displayName" : "Pro de por vida",
+          "locale" : "es"
+        },
+        {
+          "description" : "Accesso a vita a tutte le funzionalità Pro",
+          "displayName" : "Pro a vita",
+          "locale" : "it"
+        },
+        {
+          "description" : "Acesso vitalício a todos os recursos Pro",
+          "displayName" : "Pro Vitalício",
+          "locale" : "pt_BR"
+        },
+        {
+          "description" : "すべてのPro機能に永久アクセス",
+          "displayName" : "永久Pro",
+          "locale" : "ja"
+        },
+        {
+          "description" : "모든 Pro 기능에 평생 액세스",
+          "displayName" : "평생 Pro",
+          "locale" : "ko"
+        },
+        {
+          "description" : "终身访问所有Pro功能",
+          "displayName" : "终身Pro",
+          "locale" : "zh_Hans"
+        },
+        {
+          "description" : "終身存取所有Pro功能",
+          "displayName" : "終身Pro",
+          "locale" : "zh_Hant"
+        },
+        {
+          "description" : "Пожизненный доступ ко всем Pro функциям",
+          "displayName" : "Pro навсегда",
+          "locale" : "ru"
+        },
+        {
+          "description" : "Levenslange toegang tot alle Pro-functies",
+          "displayName" : "Levenslang Pro",
+          "locale" : "nl"
+        },
+        {
+          "description" : "Livstidsåtkomst till alla Pro-funktioner",
+          "displayName" : "Livstids Pro",
+          "locale" : "sv"
+        },
+        {
+          "description" : "Dożywotni dostęp do wszystkich funkcji Pro",
+          "displayName" : "Pro dożywotnio",
+          "locale" : "pl"
+        },
+        {
+          "description" : "Doživotní přístup ke všem Pro funkcím",
+          "displayName" : "Pro doživotně",
+          "locale" : "cs"
+        },
+        {
+          "description" : "Доступ до всіх Pro-функцій назавжди",
+          "displayName" : "Pro назавжди",
+          "locale" : "uk"
+        },
+        {
+          "description" : "الوصول مدى الحياة لجميع ميزات Pro",
+          "displayName" : "Pro مدى الحياة",
+          "locale" : "ar"
+        },
+        {
+          "description" : "सभी प्रो सुविधाओं तक आजीवन पहुँच",
+          "displayName" : "लाइफटाइम प्रो",
+          "locale" : "hi"
+        },
+        {
+          "description" : "Akses seumur hidup ke semua fitur Pro",
+          "displayName" : "Pro Seumur Hidup",
+          "locale" : "id"
+        },
+        {
+          "description" : "การเข้าถึงฟีเจอร์ Pro ทั้งหมดตลอดชีพ",
+          "displayName" : "Pro ตลอดชีพ",
+          "locale" : "th"
+        },
+        {
+          "description" : "Truy cập trọn đời tất cả tính năng Pro",
+          "displayName" : "Pro Trọn Đời",
+          "locale" : "vi"
+        }
+      ],
+      "productID" : "com.mindfulnotes.app.pro.lifetime",
+      "referenceName" : "Lifetime Pro",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6745230000",
+    "_developerTeamID" : "XXXXXXXXXX",
+    "_failTransactionsEnabled" : false,
+    "_lastVerificationError" : "",
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21462498",
+      "localizations" : [
+        {
+          "description" : "Pro subscription plans",
+          "displayName" : "Pro",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Pro abonelik planları",
+          "displayName" : "Pro",
+          "locale" : "tr"
+        }
+      ],
+      "name" : "Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6745230002",
+          "introductoryOffer" : {
+            "internalID" : "introOffer001",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W",
+            "numberOfPeriods" : 1,
+            "displayPrice" : "0"
+          },
+          "localizations" : [
+            {
+              "description" : "Monthly access to all Pro features",
+              "displayName" : "Monthly Pro",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Tüm Pro özelliklere aylık erişim",
+              "displayName" : "Aylık Pro",
+              "locale" : "tr"
+            },
+            {
+              "description" : "Accès mensuel à toutes les fonctionnalités Pro",
+              "displayName" : "Pro Mensuel",
+              "locale" : "fr"
+            },
+            {
+              "description" : "Monatlicher Zugang zu allen Pro-Funktionen",
+              "displayName" : "Monatlich Pro",
+              "locale" : "de"
+            },
+            {
+              "description" : "Acceso mensual a todas las funciones Pro",
+              "displayName" : "Pro Mensual",
+              "locale" : "es"
+            },
+            {
+              "description" : "Accesso mensile a tutte le funzionalità Pro",
+              "displayName" : "Pro Mensile",
+              "locale" : "it"
+            },
+            {
+              "description" : "Acesso mensal a todos os recursos Pro",
+              "displayName" : "Pro Mensal",
+              "locale" : "pt_BR"
+            },
+            {
+              "description" : "すべてのPro機能に月額アクセス",
+              "displayName" : "月額Pro",
+              "locale" : "ja"
+            },
+            {
+              "description" : "모든 Pro 기능에 월간 액세스",
+              "displayName" : "월간 Pro",
+              "locale" : "ko"
+            },
+            {
+              "description" : "每月访问所有Pro功能",
+              "displayName" : "月度Pro",
+              "locale" : "zh_Hans"
+            },
+            {
+              "description" : "每月存取所有Pro功能",
+              "displayName" : "月費Pro",
+              "locale" : "zh_Hant"
+            },
+            {
+              "description" : "Ежемесячный доступ ко всем Pro функциям",
+              "displayName" : "Ежемесячный Pro",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Maandelijkse toegang tot alle Pro-functies",
+              "displayName" : "Maandelijks Pro",
+              "locale" : "nl"
+            },
+            {
+              "description" : "Månatlig åtkomst till alla Pro-funktioner",
+              "displayName" : "Månads Pro",
+              "locale" : "sv"
+            },
+            {
+              "description" : "Miesięczny dostęp do wszystkich funkcji Pro",
+              "displayName" : "Pro miesięcznie",
+              "locale" : "pl"
+            },
+            {
+              "description" : "Měsíční přístup ke všem Pro funkcím",
+              "displayName" : "Pro měsíčně",
+              "locale" : "cs"
+            },
+            {
+              "description" : "Щомісячний доступ до всіх Pro-функцій",
+              "displayName" : "Pro щомісяця",
+              "locale" : "uk"
+            },
+            {
+              "description" : "الوصول الشهري لجميع ميزات Pro",
+              "displayName" : "Pro شهري",
+              "locale" : "ar"
+            },
+            {
+              "description" : "सभी प्रो सुविधाओं तक मासिक पहुँच",
+              "displayName" : "मासिक प्रो",
+              "locale" : "hi"
+            },
+            {
+              "description" : "Akses bulanan ke semua fitur Pro",
+              "displayName" : "Pro Bulanan",
+              "locale" : "id"
+            },
+            {
+              "description" : "การเข้าถึงฟีเจอร์ Pro ทั้งหมดรายเดือน",
+              "displayName" : "Pro รายเดือน",
+              "locale" : "th"
+            },
+            {
+              "description" : "Truy cập hàng tháng tất cả tính năng Pro",
+              "displayName" : "Pro Hàng Tháng",
+              "locale" : "vi"
+            }
+          ],
+          "productID" : "com.mindfulnotes.app.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly Pro",
+          "subscriptionGroupID" : "21462498",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "15.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6745230003",
+          "introductoryOffer" : {
+            "internalID" : "introOffer002",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P1W",
+            "numberOfPeriods" : 1,
+            "displayPrice" : "0"
+          },
+          "localizations" : [
+            {
+              "description" : "Yearly access to all Pro features",
+              "displayName" : "Yearly Pro",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Tüm Pro özelliklere yıllık erişim",
+              "displayName" : "Yıllık Pro",
+              "locale" : "tr"
+            },
+            {
+              "description" : "Accès annuel à toutes les fonctionnalités Pro",
+              "displayName" : "Pro Annuel",
+              "locale" : "fr"
+            },
+            {
+              "description" : "Jährlicher Zugang zu allen Pro-Funktionen",
+              "displayName" : "Jährlich Pro",
+              "locale" : "de"
+            },
+            {
+              "description" : "Acceso anual a todas las funciones Pro",
+              "displayName" : "Pro Anual",
+              "locale" : "es"
+            },
+            {
+              "description" : "Accesso annuale a tutte le funzionalità Pro",
+              "displayName" : "Pro Annuale",
+              "locale" : "it"
+            },
+            {
+              "description" : "Acesso anual a todos os recursos Pro",
+              "displayName" : "Pro Anual",
+              "locale" : "pt_BR"
+            },
+            {
+              "description" : "すべてのPro機能に年額アクセス",
+              "displayName" : "年額Pro",
+              "locale" : "ja"
+            },
+            {
+              "description" : "모든 Pro 기능에 연간 액세스",
+              "displayName" : "연간 Pro",
+              "locale" : "ko"
+            },
+            {
+              "description" : "每年访问所有Pro功能",
+              "displayName" : "年度Pro",
+              "locale" : "zh_Hans"
+            },
+            {
+              "description" : "每年存取所有Pro功能",
+              "displayName" : "年費Pro",
+              "locale" : "zh_Hant"
+            },
+            {
+              "description" : "Ежегодный доступ ко всем Pro функциям",
+              "displayName" : "Ежегодный Pro",
+              "locale" : "ru"
+            },
+            {
+              "description" : "Jaarlijkse toegang tot alle Pro-functies",
+              "displayName" : "Jaarlijks Pro",
+              "locale" : "nl"
+            },
+            {
+              "description" : "Årlig åtkomst till alla Pro-funktioner",
+              "displayName" : "Års Pro",
+              "locale" : "sv"
+            },
+            {
+              "description" : "Roczny dostęp do wszystkich funkcji Pro",
+              "displayName" : "Pro rocznie",
+              "locale" : "pl"
+            },
+            {
+              "description" : "Roční přístup ke všem Pro funkcím",
+              "displayName" : "Pro ročně",
+              "locale" : "cs"
+            },
+            {
+              "description" : "Щорічний доступ до всіх Pro-функцій",
+              "displayName" : "Pro щорічно",
+              "locale" : "uk"
+            },
+            {
+              "description" : "الوصول السنوي لجميع ميزات Pro",
+              "displayName" : "Pro سنوي",
+              "locale" : "ar"
+            },
+            {
+              "description" : "सभी प्रो सुविधाओं तक वार्षिक पहुँच",
+              "displayName" : "वार्षिक प्रो",
+              "locale" : "hi"
+            },
+            {
+              "description" : "Akses tahunan ke semua fitur Pro",
+              "displayName" : "Pro Tahunan",
+              "locale" : "id"
+            },
+            {
+              "description" : "การเข้าถึงฟีเจอร์ Pro ทั้งหมดรายปี",
+              "displayName" : "Pro รายปี",
+              "locale" : "th"
+            },
+            {
+              "description" : "Truy cập hàng năm tất cả tính năng Pro",
+              "displayName" : "Pro Hàng Năm",
+              "locale" : "vi"
+            }
+          ],
+          "productID" : "com.mindfulnotes.app.yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Yearly Pro",
+          "subscriptionGroupID" : "21462498",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

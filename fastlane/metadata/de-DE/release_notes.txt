@@ -1,0 +1,10 @@
+Neu in Notivation 1.0:
+
+- KI-Assistent: Gemini, OpenAI oder Claude für intelligente Zusammenfassungen, Tag-Vorschläge und Entscheidungsanalysen
+- 10 Wunderschöne Themes: Hell, Dunkel, OLED, Warm, Ozean, Wald, Sonnenuntergang, Kinder, Senior, Minimal
+- Morgenbriefing-Dashboard mit Klarheitswert und Momentum-Tracking
+- Entscheidungswerkzeuge mit Pro/Contra-Analyse und Vertrauenskalibrierung
+- Leinwand-Mindmap für visuelle Notizorganisation
+- Zukunftsprojektion für Szenarioplanung
+- 37 Sprachen unterstützt
+- Biometrische Sicherheit mit verschlüsseltem Tresor

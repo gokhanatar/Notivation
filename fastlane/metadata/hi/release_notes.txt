@@ -1,0 +1,10 @@
+Notivation 1.0 में नया:
+
+- AI असिस्टेंट: Gemini, OpenAI या Claude से स्मार्ट सारांश, टैग सुझाव और फ़ैसला विश्लेषण
+- 10 ख़ूबसूरत थीम्स: Light, Dark, OLED, Warm, Ocean, Forest, Sunset, Kids, Senior, Minimal
+- मॉर्निंग ब्रीफ़ डैशबोर्ड — क्लैरिटी स्कोर और मोमेंटम ट्रैकिंग
+- Pro/Con विश्लेषण और Confidence Calibration के साथ फ़ैसला टूल्स
+- Canvas माइंड मैप
+- Future Cast सिनेरियो प्लानिंग
+- 37 भाषाएँ
+- बायोमेट्रिक सुरक्षा और एन्क्रिप्टेड वॉल्ट

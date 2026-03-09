@@ -1,0 +1,10 @@
+Nieuw in Notivation 1.0:
+
+- AI-Assistent: koppel Gemini, OpenAI of Claude voor slimme samenvattingen, tagsuggesties en beslissingsanalyse
+- 10 prachtige thema's: Light, Dark, OLED, Warm, Ocean, Forest, Sunset, Kids, Senior, Minimal
+- Morning Brief Dashboard met Clarity Score en Momentum-tracking
+- Beslissingstools met pro/contra-analyse en Confidence Calibration
+- Canvas mindmap
+- Future Cast scenarioplanning
+- 37 talen ondersteund
+- Biometrische beveiliging en versleutelde kluis

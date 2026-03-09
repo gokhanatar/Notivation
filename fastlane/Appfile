@@ -1,0 +1,8 @@
+app_identifier("com.mindfulnotes.app")
+apple_id(ENV["APPLE_ID"] || "")
+itc_team_id(ENV["ITC_TEAM_ID"] || "")
+team_id(ENV["TEAM_ID"] || "")
+
+# App Store Connect API Key (recommended over password-based auth)
+# Store the .p8 file securely and reference it here
+# api_key_path("fastlane/AuthKey.p8")

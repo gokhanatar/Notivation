@@ -1,0 +1,10 @@
+Nouveautés de Notivation 1.0 :
+
+- Assistant IA : Connectez Gemini, OpenAI ou Claude pour des résumés intelligents, suggestions d'étiquettes et analyses de décisions
+- 10 Thèmes Magnifiques : Clair, Sombre, OLED, Chaleureux, Océan, Forêt, Coucher de Soleil, Enfant, Senior, Minimal
+- Tableau de bord Briefing Matinal avec Score de Clarté et suivi de Dynamique
+- Outils de décision avec Analyse Pour/Contre et Calibration de Confiance
+- Canevas Carte Mentale pour l'organisation visuelle des notes
+- Projection Future pour la planification de scénarios
+- 37 langues prises en charge
+- Sécurité biométrique avec coffre chiffré

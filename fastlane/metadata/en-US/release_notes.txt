@@ -1,0 +1,10 @@
+What's new in Notivation 1.0:
+
+- AI Assistant: Connect Gemini, OpenAI, or Claude for smart summaries, tag suggestions, and decision analysis
+- 10 Beautiful Themes: Light, Dark, OLED, Warm, Ocean, Forest, Sunset, Kids, Senior, Minimal
+- Morning Brief Dashboard with Clarity Score and Momentum tracking
+- Decision tools with Pro/Con Analysis and Confidence Calibration
+- Canvas Mind Map for visual note organization
+- Future Cast scenario planning
+- 37 language support
+- Biometric security with encrypted vault

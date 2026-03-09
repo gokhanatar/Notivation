@@ -1,0 +1,10 @@
+Uutta Notivation 1.0:ssa:
+
+- Tekoälyavustaja: Yhdistä Gemini, OpenAI tai Claude älykkäisiin tiivistelmiin, tunniste-ehdotuksiin ja päätösanalyysiin
+- 10 kaunista teemaa: Vaalea, Tumma, OLED, Lämmin, Valtameri, Metsä, Auringonlasku, Lapsi, Seniori, Minimaalinen
+- Aamukatsaus-hallintapaneeli selkeyspisteillä ja vauhtiseurannalla
+- Päätöstyökalut etu/haitta-analyysillä ja luottamuskalibroinnilla
+- Kanvas-miellekartta visuaaliseen muistiinpanojen järjestämiseen
+- Tulevaisuuden ennuste -skenaariosuunnittelu
+- 37 kielen tuki
+- Biometrinen turva salatulla holvilla

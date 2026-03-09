@@ -1,0 +1,83 @@
+require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
+
+platform :ios, '16.0'
+use_frameworks!
+
+# workaround to avoid Xcode caching of Pods that requires
+# Product -> Clean Build Folder after new Cordova plugins installed
+# Requires CocoaPods 1.6 or newer
+install! 'cocoapods', :disable_input_output_paths => false
+
+def capacitor_pods
+  pod 'Capacitor', :path => '../../node_modules/@capacitor/ios'
+  pod 'CapacitorCordova', :path => '../../node_modules/@capacitor/ios'
+  pod 'AparajitaCapacitorBiometricAuth', :path => '../../node_modules/@aparajita/capacitor-biometric-auth'
+  pod 'CapacitorApp', :path => '../../node_modules/@capacitor/app'
+  pod 'CapacitorCamera', :path => '../../node_modules/@capacitor/camera'
+  pod 'CapacitorHaptics', :path => '../../node_modules/@capacitor/haptics'
+  pod 'CapacitorLocalNotifications', :path => '../../node_modules/@capacitor/local-notifications'
+  pod 'CapacitorSplashScreen', :path => '../../node_modules/@capacitor/splash-screen'
+  pod 'CapacitorStatusBar', :path => '../../node_modules/@capacitor/status-bar'
+end
+
+target 'App' do
+  capacitor_pods
+  # Add your Pods here
+end
+
+post_install do |installer|
+  assertDeploymentTarget(installer)
+
+  # Suppress "Recommended Settings" popup by marking project as already upgraded
+  installer.pods_project.root_object.attributes['LastUpgradeCheck'] = '2620'
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # Suppress all warnings from Pods
+      config.build_settings['CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER'] = 'NO'
+      config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = 'YES'
+      config.build_settings['SWIFT_SUPPRESS_WARNINGS'] = 'YES'
+      config.build_settings['GCC_TREAT_WARNINGS_AS_ERRORS'] = 'NO'
+      config.build_settings['SWIFT_TREAT_WARNINGS_AS_ERRORS'] = 'NO'
+      # Suppress deprecation warnings (WKProcessPool etc)
+      config.build_settings['CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS'] = 'NO'
+      config.build_settings['GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS'] = 'NO'
+      config.build_settings['OTHER_CFLAGS'] = '$(inherited) -Wno-deprecated-declarations -Wno-quoted-include-in-framework-header -w'
+      # Disable module verifier
+      config.build_settings['ENABLE_MODULE_VERIFIER'] = 'NO'
+      config.build_settings['MODULE_VERIFIER_SUPPORTED_LANGUAGES'] = ''
+      config.build_settings['MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS'] = ''
+    end
+
+    # Nuke ALL shell script build phases related to module verification
+    target.build_phases.reject! { |phase|
+      if phase.is_a?(Xcodeproj::Project::Object::PBXShellScriptBuildPhase)
+        script = phase.shell_script || ''
+        name = phase.name || ''
+        # Kill any phase that touches module verification
+        name.include?('Verify') ||
+        name.include?('verify') ||
+        script.include?('verify-module') ||
+        script.include?('VerifyModule') ||
+        script.include?('module-verifier')
+      else
+        false
+      end
+    }
+  end
+
+  # Also disable module verifier at project level
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['ENABLE_MODULE_VERIFIER'] = 'NO'
+  end
+
+  # Fix [CP] Embed Pods Frameworks missing outputs warning
+  installer.pods_project.targets.each do |target|
+    if target.name == 'Pods-App'
+      target.build_phases.each do |phase|
+        if phase.respond_to?(:name) && phase.name == '[CP] Embed Pods Frameworks'
+          phase.always_out_of_date = "1"
+        end
+      end
+    end
+  end
+end

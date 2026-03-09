@@ -1,0 +1,66 @@
+ABOUT THE APP
+Notivation is an offline-first note-taking and decision-tracking app. It stores
+all data locally on the device using IndexedDB. There is no backend server, no
+cloud sync, no user accounts, and no data collection of any kind.
+
+AUTHENTICATION
+The app uses device-local biometric authentication (Face ID / Touch ID) only for
+the optional Vault feature. There are no user accounts, no sign-in screens, and
+no passwords. Reviewers do not need any credentials to use the app.
+
+IN-APP PURCHASES (Updated for v1.3 resubmission)
+This build includes three In-App Purchase products, all submitted for review
+alongside this binary:
+
+  1. Pro Monthly — com.mindfulnotes.app.pro.monthly
+     Auto-renewable subscription, 1 month, $3.99 USD base price.
+
+  2. Pro Yearly — com.mindfulnotes.app.pro.yearly
+     Auto-renewable subscription, 1 year, $29.99 USD base price.
+     Displayed as "Most Popular" with ~39% savings vs monthly.
+
+  3. Pro Lifetime — com.mindfulnotes.app.pro.lifetime
+     Non-consumable in-app purchase, $49.99 USD.
+     One-time payment for permanent Pro access.
+
+To test the purchase flow:
+  - Open the app and tap any feature marked with a lock icon (e.g., Focus Mode,
+    Note Graph, Calendar View, or any premium theme in Settings).
+  - The Pro upgrade modal will appear showing all three plans.
+  - Select a plan and tap the purchase button to trigger the StoreKit flow.
+  - "Restore Purchases" is available at the bottom of the Pro modal.
+
+The app uses StoreKit 2 for all purchase and restore operations. Prices shown
+in the Pro modal are fetched from the App Store at runtime via
+Product.products(for:) — they always reflect the actual App Store pricing for
+the reviewer's territory.
+
+PROMO CODE SYSTEM (Web Only)
+The promo code input field in the Pro modal is only visible on web builds. It is
+completely hidden on iOS. It does not bypass or interfere with StoreKit in any
+way. If for any reason a promo code input appears on iOS during review, please
+note it is a secondary web-only mechanism — StoreKit subscription is the sole
+monetization path on iOS.
+
+AI ASSISTANT FEATURE
+The AI Assistant is a Pro feature that allows users to connect their own API key
+from Google Gemini, OpenAI, or Anthropic Claude. The app makes direct API calls
+to these providers using the user's key. The developer does not provide, store,
+or have access to these API keys. Keys are stored locally in the device's
+IndexedDB. This feature is optional and the app is fully functional without it.
+
+OFFLINE OPERATION
+The app works entirely offline. No internet connection is required for any core
+functionality. Internet is only needed for the optional AI Assistant feature
+(user-provided API key) and for In-App Purchase verification.
+
+ENCRYPTION
+The app uses standard IndexedDB storage encryption provided by iOS for the Vault
+feature. No custom cryptographic algorithms are implemented.
+
+SUPPORTED LANGUAGES
+37 languages: English, Turkish, Spanish, French, German, Portuguese, Russian,
+Chinese, Japanese, Korean, Arabic, Hindi, Italian, Dutch, Polish, Ukrainian,
+Vietnamese, Thai, Indonesian, Malay, Swedish, Danish, Norwegian, Finnish, Czech,
+Slovak, Hungarian, Romanian, Bulgarian, Greek, Hebrew, Persian, Bengali, Tamil,
+Urdu, Swahili, and Afrikaans.

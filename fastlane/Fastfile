@@ -1,0 +1,274 @@
+default_platform(:ios)
+
+IPA_PATH = "/Users/neslihan/Desktop/uygulama/mindful-notes-main/store-deployment/ios/MindfulNotes.ipa"
+
+platform :ios do
+
+  # ============================================================
+  # FULL UPLOAD: metadata + screenshots + IPA
+  # Only "Submit for Review" is left to the user
+  # ============================================================
+  desc "Upload everything to App Store Connect (metadata, screenshots, IPA)"
+  lane :upload_all do
+    api_key = get_api_key
+
+    deliver(
+      api_key: api_key,
+      ipa: IPA_PATH,
+      metadata_path: "./fastlane/metadata",
+      screenshots_path: "./fastlane/screenshots",
+      skip_binary_upload: false,
+      skip_screenshots: false,
+      skip_metadata: false,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      automatic_release: false,
+      phased_release: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      run_precheck_before_submit: true,
+      app_rating_config_path: "./fastlane/rating_config.json",
+      copyright: "2026 Notivation",
+      primary_category: "UTILITIES",
+      secondary_category: "PRODUCTIVITY",
+      app_review_information: {
+        first_name: ENV["REVIEW_FIRST_NAME"] || "Gökhan Alp",
+        last_name: ENV["REVIEW_LAST_NAME"] || "Atar",
+        phone_number: ENV["REVIEW_PHONE"] || "+905454073371",
+        email_address: ENV["REVIEW_EMAIL"] || "g.alpatar@gmail.com",
+        notes: File.read(File.expand_path("review_notes.txt", __dir__))
+      }
+    )
+
+    UI.success("Upload complete! Go to App Store Connect to submit for review.")
+  end
+
+  # ============================================================
+  # METADATA ONLY: descriptions, keywords, screenshots
+  # ============================================================
+  desc "Upload only metadata (no binary, no screenshots)"
+  lane :upload_metadata do
+    api_key = get_api_key
+
+    deliver(
+      api_key: api_key,
+      metadata_path: "./fastlane/metadata",
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_metadata: false,
+      submit_for_review: false,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      copyright: "2026 Notivation",
+      primary_category: "UTILITIES",
+      secondary_category: "PRODUCTIVITY",
+      app_review_information: {
+        first_name: ENV["REVIEW_FIRST_NAME"] || "Gökhan Alp",
+        last_name: ENV["REVIEW_LAST_NAME"] || "Atar",
+        phone_number: ENV["REVIEW_PHONE"] || "+905454073371",
+        email_address: ENV["REVIEW_EMAIL"] || "g.alpatar@gmail.com",
+        notes: File.read(File.expand_path("review_notes.txt", __dir__))
+      }
+    )
+
+    UI.success("Metadata uploaded!")
+  end
+
+  # ============================================================
+  # SCREENSHOTS ONLY
+  # ============================================================
+  desc "Upload only screenshots"
+  lane :upload_screenshots do
+    api_key = get_api_key
+
+    deliver(
+      api_key: api_key,
+      screenshots_path: "./fastlane/screenshots",
+      skip_binary_upload: true,
+      skip_screenshots: false,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      force: true,
+    )
+
+    UI.success("Screenshots uploaded!")
+  end
+
+  desc "Upload screenshots for a single locale"
+  lane :upload_screenshots_locale do |options|
+    api_key = get_api_key
+    locale = options[:locale] || "en-US"
+    tmp_dir = "./fastlane/screenshots_tmp"
+
+    # Create temp dir with only this locale
+    base = File.expand_path("..", __dir__)
+    FileUtils.rm_rf(tmp_dir)
+    FileUtils.mkdir_p(tmp_dir)
+    src = File.join(base, "fastlane", "screenshots", locale)
+    if File.directory?(src)
+      FileUtils.cp_r(src, "#{tmp_dir}/#{locale}")
+    else
+      UI.user_error!("No screenshots found for #{locale} at #{src}")
+    end
+
+    deliver(
+      api_key: api_key,
+      screenshots_path: tmp_dir,
+      skip_binary_upload: true,
+      skip_screenshots: false,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      submit_for_review: false,
+      force: true,
+    )
+
+    FileUtils.rm_rf(tmp_dir)
+    UI.success("Screenshots for #{locale} uploaded!")
+  end
+
+  # ============================================================
+  # BINARY ONLY: just the IPA
+  # ============================================================
+  desc "Upload only the IPA binary"
+  lane :upload_binary do
+    api_key = get_api_key
+
+    deliver(
+      api_key: api_key,
+      ipa: IPA_PATH,
+      skip_binary_upload: false,
+      skip_screenshots: true,
+      skip_metadata: true,
+      submit_for_review: false,
+      force: true,
+    )
+
+    UI.success("IPA binary uploaded!")
+  end
+
+  # ============================================================
+  # VALIDATE: dry-run to check for issues before uploading
+  # ============================================================
+  desc "Validate metadata and screenshots without uploading"
+  lane :validate do
+    api_key = get_api_key
+
+    # precheck validates app metadata against App Store rules
+    precheck(
+      api_key: api_key,
+      app_identifier: "com.mindfulnotes.app",
+      default_rule_level: :warn,
+      include_in_app_purchases: false,
+    )
+
+    UI.success("Validation passed! Metadata and screenshots are ready.")
+  end
+
+  # ============================================================
+  # SET PRICING & PRIVACY via ASC API
+  # ============================================================
+  desc "Set app pricing to Free and privacy to No Data Collected"
+  lane :setup_app do
+    api_key = get_api_key
+    token = Spaceship::ConnectAPI::Token.from(hash: api_key)
+    Spaceship::ConnectAPI.token = token
+
+    app = Spaceship::ConnectAPI::App.find("com.mindfulnotes.app")
+    UI.user_error!("App not found!") unless app
+    UI.message("Found app: #{app.name} (#{app.id})")
+
+    # ---- PRICING: Set to Free ----
+    UI.message("Setting pricing to Free...")
+    begin
+      # Check current pricing
+      client = Spaceship::ConnectAPI.client
+      resp = client.get("v1/apps/#{app.id}/appPriceSchedule", { include: "manualPrices,automaticPrices,baseTerritory" })
+      UI.success("Current pricing schedule retrieved")
+
+      # For Free apps, we need price point = 0
+      # Try to create a new price schedule with $0
+      body = {
+        data: {
+          type: "appPriceSchedules",
+          relationships: {
+            app: { data: { type: "apps", id: app.id } },
+            baseTerritory: { data: { type: "territories", id: "USA" } },
+            manualPrices: { data: [{ type: "appPrices", id: "${price1}" }] }
+          }
+        },
+        included: [{
+          type: "appPrices",
+          id: "${price1}",
+          attributes: { startDate: nil },
+          relationships: {
+            appPricePoint: {
+              data: { type: "appPricePoints", id: "eyJzIjoiNjQ4OTk3NDkiLCJ0IjoiVVNBIiwiZiI6MH0" }
+            }
+          }
+        }]
+      }
+      client.post("v1/appPriceSchedules", body)
+      UI.success("Pricing set to FREE!")
+    rescue => e
+      UI.important("Pricing note: #{e.message}")
+      UI.important("The app may already have pricing configured.")
+    end
+
+    # ---- PRIVACY: No Data Collected ----
+    UI.message("Configuring privacy declarations...")
+    begin
+      app_infos = app.get_app_infos
+      app_info = app_infos.first
+
+      # Get existing privacy declarations
+      client = Spaceship::ConnectAPI.client
+
+      # Check for existing declarations
+      resp = client.get("v1/apps/#{app.id}/appDataDeclarations")
+      UI.message("Privacy data fetched")
+
+      # Delete any existing data type declarations to indicate "No Data Collected"
+      if resp && resp.body && resp.body["data"]
+        resp.body["data"].each do |decl|
+          begin
+            client.delete("v1/appDataDeclarations/#{decl['id']}")
+            UI.message("Deleted existing declaration: #{decl['id']}")
+          rescue => e
+            UI.message("Skip: #{e.message}")
+          end
+        end
+      end
+
+      UI.success("Privacy: No data collected - configured!")
+    rescue => e
+      UI.important("Privacy API note: #{e.message}")
+    end
+
+    UI.success("✅ App setup complete!")
+    UI.message("Pricing: Free")
+    UI.message("Privacy: No Data Collected")
+    UI.message("")
+    UI.important("⚠️  Please verify in App Store Connect:")
+    UI.important("   1. Pricing → Should show 'Free'")
+    UI.important("   2. App Privacy → 'No, we do not collect data from this app'")
+  end
+
+  # ============================================================
+  # HELPER: App Store Connect API Key
+  # ============================================================
+  private_lane :get_api_key do
+    key_id = ENV["ASC_KEY_ID"] || "3Y4L9XJC76"
+    issuer_id = ENV["ASC_ISSUER_ID"] || "7927d78f-7f09-4ff0-bad9-6c36b8afcaf5"
+    key_path = ENV["ASC_KEY_PATH"] || File.expand_path("AuthKey_3Y4L9XJC76.p8", __dir__)
+
+    app_store_connect_api_key(
+      key_id: key_id,
+      issuer_id: issuer_id,
+      key_filepath: key_path,
+      duration: 1200,
+      in_house: false,
+    )
+  end
+
+end

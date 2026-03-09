@@ -1,0 +1,10 @@
+Nyheter i Notivation 1.0:
+
+- AI-assistent: Anslut Gemini, OpenAI eller Claude för smarta sammanfattningar, taggförslag och beslutsanalys
+- 10 Vackra teman: Ljust, Mörkt, OLED, Varmt, Hav, Skog, Solnedgång, Barn, Senior, Minimalt
+- Morgonbriefing med Klarhetspoäng och Momentumspårning
+- Beslutsverktyg med För/Nackdel-analys och Förtroendekalibrering
+- Canvas Mindmap
+- Future Cast scenarioplanering
+- Stöd för 37 språk
+- Biometrisk säkerhet med krypterat valv

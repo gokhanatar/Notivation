@@ -1,0 +1,10 @@
+Novidades no Notivation 1.0:
+
+- Assistente IA: Ligue Gemini, OpenAI ou Claude para resumos inteligentes, sugestões de etiquetas e análise de decisões
+- 10 Temas Magníficos: Claro, Escuro, OLED, Quente, Oceano, Floresta, Pôr do Sol, Infantil, Sénior, Minimal
+- Painel Briefing Matinal com Pontuação de Clareza e acompanhamento de Dinamismo
+- Ferramentas de decisão com Análise Prós/Contras e Calibração de Confiança
+- Tela de Mapa Mental para organização visual de notas
+- Projeção Futura para planeamento de cenários
+- Suporte para 37 idiomas
+- Segurança biométrica com cofre encriptado

@@ -1,0 +1,10 @@
+Novita' in Notivation 1.0:
+
+- Assistente AI: collega Gemini, OpenAI o Claude per riassunti, suggerimenti tag e analisi decisioni
+- 10 temi splendidi: Light, Dark, OLED, Warm, Ocean, Forest, Sunset, Kids, Senior, Minimal
+- Morning Brief Dashboard con Clarity Score e Momentum
+- Strumenti decisionali con analisi Pro/Contro e Confidence Calibration
+- Canvas mappa mentale
+- Future Cast pianificazione scenari
+- 37 lingue supportate
+- Sicurezza biometrica e cassaforte crittografata

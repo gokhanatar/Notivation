@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy - Notivation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1a1a2e;
+    background: #f8f9fa;
+    padding: 0;
+  }
+  .header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header p { font-size: 14px; opacity: 0.85; }
+  .container {
+    max-width: 720px;
+    margin: -20px auto 40px;
+    background: white;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6366f1;
+    margin: 32px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e8e8ff;
+  }
+  h2:first-child { margin-top: 0; }
+  h3 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin: 20px 0 8px; }
+  p { margin: 8px 0; font-size: 15px; color: #333; }
+  ul, ol { margin: 8px 0 8px 20px; }
+  li { margin: 4px 0; font-size: 15px; color: #333; }
+  a { color: #6366f1; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .highlight {
+    background: #f0f0ff;
+    border-left: 4px solid #6366f1;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 16px 0;
+  }
+  .highlight p { margin: 0; font-weight: 500; color: #4338ca; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee; }
+  th { background: #f8f9fa; font-weight: 600; color: #555; }
+  .contact {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 32px;
+    text-align: center;
+  }
+  .contact a { color: #6366f1; font-weight: 600; }
+  .footer { text-align: center; padding: 24px; font-size: 13px; color: #999; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: February 25, 2026</p>
+</div>
+
+<div class="container">
+
+  <h2>1. Introduction</h2>
+  <p>Welcome to <strong>Notivation</strong> ("the App", "we", "our", "us"). Notivation is a personal productivity application designed for capturing decisions, actions, ideas, and notes. We are deeply committed to protecting your privacy and ensuring the security of your personal information.</p>
+  <p>This Privacy Policy explains how your information is collected, used, stored, and protected when you use Notivation. By downloading, installing, or using the App, you acknowledge that you have read, understood, and agree to be bound by the practices described in this policy.</p>
+
+  <div class="highlight">
+    <p>Notivation is built with an offline-first, privacy-by-design architecture. Your data stays on your device. We do not operate backend servers, and we do not collect, transmit, or store your personal data on any remote server.</p>
+  </div>
+
+  <h2>2. Data We Collect</h2>
+
+  <h3>2.1 Data You Create Within the App</h3>
+  <p>All content you create within the App is stored <strong>exclusively on your device</strong> using IndexedDB (a secure, browser/device-level database). This includes but is not limited to:</p>
+  <ul>
+    <li><strong>Notes:</strong> Titles, body text, note types (decision, action, info, idea, follow-up), mood tags, due dates, reminder dates, confidence levels, and lifecycle stages</li>
+    <li><strong>Action Items:</strong> Tasks and sub-items associated with your notes, including completion status, ordering, and due dates</li>
+    <li><strong>Tags & Categories:</strong> Custom labels and color-coded tags you create to organize your content</li>
+    <li><strong>Decision Analysis:</strong> Pro/con items with weighted scores for decision-type notes</li>
+    <li><strong>Scenarios & Outcomes:</strong> Future projections, probability estimates, and resolution tracking for planning purposes</li>
+    <li><strong>Templates:</strong> Custom and built-in note templates for repeated use</li>
+    <li><strong>Folders:</strong> Organizational structures with custom names, colors, icons, and hierarchical nesting</li>
+    <li><strong>Photo Attachments:</strong> Images captured via camera or selected from your photo library, compressed and stored as Base64 data within the local database (maximum 5 attachments per note)</li>
+    <li><strong>Note Version History:</strong> Automatic snapshots of your note edits for version tracking and undo functionality</li>
+    <li><strong>Mind Map Connections:</strong> Links and labels connecting related notes in canvas view</li>
+    <li><strong>Custom Views:</strong> Saved filter configurations, sort preferences, and display settings</li>
+  </ul>
+
+  <h3>2.2 App Settings & Preferences</h3>
+  <p>The App stores your preferences locally on your device to maintain your personalized experience:</p>
+  <ul>
+    <li>Visual theme selection (light, dark, warm, kids, senior, minimal, OLED, ocean, forest, sunset) and font preferences</li>
+    <li>Language preference for the user interface</li>
+    <li>Sorting method, display layout, and quick-note type preferences</li>
+    <li>App lock settings: enabled/disabled status and auto-lock timeout duration (1, 5, 15, or 30 minutes)</li>
+    <li>Pro subscription or lifetime activation status</li>
+    <li>Optional: birthday (month and day only, in MM-DD format) for personalized greeting features</li>
+    <li>Optional: weekly intention text and momentum tracking preferences</li>
+    <li>Optional: AI provider selection, model preference, and API key (if AI features are enabled by you)</li>
+  </ul>
+
+  <h3>2.3 Local Activity Metrics</h3>
+  <p>To power in-app productivity insights such as writing streaks, momentum tracking, and personal analytics, the App records activity events locally on your device:</p>
+  <ul>
+    <li>Note creation, update, archival, and deletion timestamps</li>
+    <li>Writing duration and typing speed measurements per note session</li>
+    <li>Edit counts and memory strength scores (a metric for spaced repetition features)</li>
+    <li>Contextual metadata: time of day and day of week when notes are created or modified</li>
+    <li>Action item completion and lifecycle progression events</li>
+    <li>Pro activation and feature usage events</li>
+  </ul>
+  <p>These metrics are stored in a local <code>actionEvents</code> table and are <strong>never transmitted</strong> to any external server. They exist solely on your device for your personal productivity analytics within the App.</p>
+
+  <h3>2.4 Data We Do NOT Collect</h3>
+  <p>We want to be absolutely clear about what we do <strong>not</strong> do:</p>
+  <ul>
+    <li>We do <strong>not</strong> collect your name, email address, phone number, mailing address, or any personally identifiable information</li>
+    <li>We do <strong>not</strong> require account creation, registration, or any form of sign-in</li>
+    <li>We do <strong>not</strong> use cookies, web beacons, tracking pixels, or device fingerprinting</li>
+    <li>We do <strong>not</strong> collect device identifiers (IDFA, GAID), IP addresses, or geolocation data</li>
+    <li>We do <strong>not</strong> use Google Analytics, Firebase Analytics, Mixpanel, Segment, Amplitude, Flurry, AppsFlyer, Adjust, or any similar third-party analytics or attribution service</li>
+    <li>We do <strong>not</strong> serve advertisements or use any advertising SDKs or ad networks</li>
+    <li>We do <strong>not</strong> log, monitor, or record your usage behavior on any remote server</li>
+    <li>We do <strong>not</strong> sell, rent, lease, or trade any user data to any third party under any circumstances</li>
+  </ul>
+
+  <h2>3. How Your Data Is Stored</h2>
+
+  <h3>3.1 On-Device Local Storage</h3>
+  <p>All your data is stored in <strong>IndexedDB</strong>, a secure, sandboxed database technology built into modern web browsers and mobile operating systems. On native platforms, this database resides within the App's private data container, which is strictly isolated from all other applications by the operating system's security model.</p>
+  <p>Additional user interface preferences (such as theme selection, sort order, and language) are stored in <strong>localStorage</strong>, another device-local storage mechanism that is similarly sandboxed.</p>
+
+  <h3>3.2 No Cloud Storage or Remote Servers</h3>
+  <p>Notivation does <strong>not</strong> use any cloud database, backend server, cloud storage service, or remote infrastructure of any kind. There is no Firebase, Supabase, AWS, Google Cloud, Azure, or similar service involved. Your data physically exists only on your device's storage and never leaves your device unless you explicitly initiate an export or use optional AI features.</p>
+
+  <h3>3.3 No Cross-Device Synchronization</h3>
+  <p>Data does not sync between devices. Each installation of Notivation maintains its own independent, local database. If you use the App on multiple devices, each device will have its own separate set of data. You can manually transfer data between devices using the export and import functionality.</p>
+
+  <h3>3.4 Data Encryption & Protection</h3>
+  <p>Your data is protected through multiple layers of security:</p>
+  <ul>
+    <li><strong>Vault Mode:</strong> Individual notes can be placed in a secure vault. Accessing vault notes requires biometric authentication (Face ID, Touch ID, or device passcode). This provides an additional layer of protection for your most sensitive information.</li>
+    <li><strong>App Lock:</strong> The entire App can be locked with biometric authentication, with configurable auto-lock timeouts. When enabled, the App requires authentication each time it is opened or returns from the background after the timeout period.</li>
+    <li><strong>Operating System Encryption:</strong> Your device's operating system provides hardware-backed encryption that protects all App data using keys tied to your device passcode.</li>
+    <li><strong>Application Sandboxing:</strong> The operating system enforces strict application sandboxing, preventing other apps from accessing Notivation's data container.</li>
+  </ul>
+
+  <h2>4. Third-Party Services</h2>
+
+  <h3>4.1 AI-Powered Features (Optional, User-Configured)</h3>
+  <p>Notivation offers optional AI-powered features including text summarization, intelligent tag suggestions, and decision analysis assistance. These features are <strong>disabled by default</strong> and will never activate without your explicit action. To use AI features, you must:</p>
+  <ol>
+    <li>Manually enable AI features in the App's Settings screen</li>
+    <li>Select an AI provider from the available options: Google Gemini, OpenAI (GPT), or Anthropic (Claude)</li>
+    <li>Obtain and enter your own personal API key directly from the chosen provider's website</li>
+    <li>Select your preferred AI model</li>
+  </ol>
+  <p><strong>When AI features are enabled and actively used:</strong></p>
+  <ul>
+    <li>The text content of the specific note you are analyzing at that moment is sent from your device directly to the selected AI provider's API servers for processing</li>
+    <li>Only the note content relevant to the specific AI request is transmitted; your entire database is never sent</li>
+    <li>The communication occurs directly between your device and the AI provider's servers. Notivation does not act as an intermediary and does not route, log, or store any of this communication</li>
+    <li>Your API key is stored locally in the App's on-device database and is transmitted directly to the AI provider with each request for authentication purposes</li>
+    <li>The AI provider's own privacy policy and data handling practices govern how they process the content you send to them</li>
+  </ul>
+  <p><strong>AI Provider Privacy Policies:</strong></p>
+  <table>
+    <tr><th>Provider</th><th>Privacy Policy</th></tr>
+    <tr><td>Google Gemini</td><td><a href="https://ai.google.dev/terms" target="_blank" rel="noopener">ai.google.dev/terms</a></td></tr>
+    <tr><td>OpenAI</td><td><a href="https://openai.com/privacy" target="_blank" rel="noopener">openai.com/privacy</a></td></tr>
+    <tr><td>Anthropic</td><td><a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></td></tr>
+  </table>
+  <p>You can disable AI features and delete your stored API key at any time through the App's Settings. We strongly recommend reviewing the privacy policy of your chosen AI provider before enabling these features.</p>
+
+  <h3>4.2 In-App Purchases</h3>
+  <p>Notivation offers optional Pro features that can be unlocked through in-app purchases. All payment transactions are processed entirely by the platform's app store:</p>
+  <ul>
+    <li>Your device's app store — governed by the app store's privacy policy</li>
+  </ul>
+  <p>We do <strong>not</strong> directly collect, process, store, or have access to any payment information including credit card numbers, billing addresses, or financial details. The only information we receive from the app store is a purchase confirmation status, which is stored locally on your device to unlock Pro features.</p>
+
+  <h3>4.3 No Other Third-Party Integrations</h3>
+  <p>Beyond the optional, user-initiated AI providers and platform app stores described above, Notivation does <strong>not</strong> integrate with, share data with, or transmit any data to any other third-party service, partner, affiliate, or entity.</p>
+
+  <h2>5. Device Permissions</h2>
+  <p>Notivation may request the following device permissions. All permissions are <strong>optional</strong>, and the core functionality of the App remains fully usable without granting any of them. You can grant or revoke these permissions at any time through your device's Settings.</p>
+
+  <h3>5.1 Biometric Authentication (Face ID / Touch ID / Fingerprint)</h3>
+  <table>
+    <tr><th>Purpose</th><td>Securing vault notes and providing App Lock functionality</td></tr>
+    <tr><th>Data Handling</th><td>All biometric data is processed entirely by the operating system's secure hardware. Notivation <strong>never</strong> accesses, reads, stores, processes, or transmits your biometric data in any form. We only receive a binary pass/fail authentication result from the OS.</td></tr>
+    <tr><th>Fallback</th><td>If biometric authentication is unavailable or fails, the system falls back to device passcode/PIN authentication, also handled entirely by the OS.</td></tr>
+  </table>
+
+  <h3>5.2 Camera & Photo Library Access</h3>
+  <table>
+    <tr><th>Purpose</th><td>Capturing new photos or selecting existing images to attach to notes</td></tr>
+    <tr><th>Data Handling</th><td>Selected or captured photos are resized to a maximum width of 800 pixels, compressed to JPEG format at 80% quality, converted to Base64 encoding, and stored within the note's data in the local IndexedDB database. Photos are <strong>never</strong> uploaded, transmitted, or shared with any server or third party.</td></tr>
+    <tr><th>Limits</th><td>Maximum of 5 photo attachments per note</td></tr>
+  </table>
+
+  <h3>5.3 Local Notifications</h3>
+  <table>
+    <tr><th>Purpose</th><td>Delivering reminders for due dates, follow-up notes, daily summaries, action item deadlines, and snoozed reminders</td></tr>
+    <tr><th>Data Handling</th><td>All notifications are <strong>local notifications</strong> scheduled and delivered entirely by the operating system's notification framework. No push notification servers or external messaging services are used. The notification content (note titles, task descriptions, counts) is composed and stored on-device only.</td></tr>
+  </table>
+
+  <h3>5.4 Haptic Feedback</h3>
+  <table>
+    <tr><th>Purpose</th><td>Providing tactile vibration feedback during user interactions for enhanced usability</td></tr>
+    <tr><th>Data Handling</th><td>No data is collected or stored. This is a hardware actuator feature that does not involve any information processing.</td></tr>
+  </table>
+
+  <h2>6. Data Export, Backup & Deletion</h2>
+
+  <h3>6.1 Data Export</h3>
+  <p>You can export all of your data at any time from the App's Settings under "Backup & Restore":</p>
+  <ul>
+    <li><strong>Full JSON Backup:</strong> A comprehensive export of all your data including notes, action items, tags, templates, settings, decision items, and activity events in a structured JSON format. The file is named <code>notivation-backup-YYYY-MM-DD.json</code>.</li>
+    <li><strong>Markdown Export:</strong> A human-readable export of all your notes in standard Markdown format (.md) with YAML frontmatter containing metadata such as type, dates, mood, lifecycle stage, and tags. The file is named <code>notivation-export-YYYY-MM-DD.md</code>.</li>
+  </ul>
+  <p>Exported files are generated on your device and saved locally. We do not have access to these exported files.</p>
+
+  <h3>6.2 Data Import (Restore)</h3>
+  <p>You can restore your data from a previously exported JSON backup file. The import process:</p>
+  <ul>
+    <li>Accepts only JSON files in Notivation's backup format</li>
+    <li>Supports backward compatibility with previous backup versions</li>
+    <li><strong>Important:</strong> Importing a backup completely replaces all existing data in the App. This action cannot be undone.</li>
+  </ul>
+
+  <h3>6.3 Data Deletion</h3>
+  <p>You have complete and immediate control over your data deletion:</p>
+  <ul>
+    <li><strong>Individual Deletion:</strong> Delete specific notes along with their associated action items, tags, decision items, scenarios, versions, and connections</li>
+    <li><strong>Archive:</strong> Move notes to archive rather than permanently deleting them</li>
+    <li><strong>Clear All Data:</strong> Use the "Clear Data" option in Settings to permanently and irreversibly delete all notes, action items, tags, and associated content from the App's database</li>
+    <li><strong>Uninstall:</strong> Removing (uninstalling) the App from your device will delete all App data, including the IndexedDB database, localStorage entries, and all cached content</li>
+  </ul>
+  <p>Since no data is stored on any server or cloud service, deletion is <strong>immediate, complete, and permanent</strong>. Once deleted, data cannot be recovered by us or anyone else. We strongly recommend creating a backup before performing any bulk deletion.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>Notivation is not specifically directed at children under the age of 13 (or the applicable minimum age in your jurisdiction, such as 16 in the European Economic Area under GDPR). We do not knowingly collect personal information from children.</p>
+  <p>Since the App does not collect any personal information, does not require account creation, and does not communicate with external servers, the risk of inadvertent children's data collection is minimal. However, if you are a parent or guardian and have concerns about your child's use of the App, please contact us at the email address provided below.</p>
+
+  <h2>8. Data Security Measures</h2>
+  <p>We implement the following technical and architectural measures to protect your data:</p>
+  <ul>
+    <li><strong>Offline-First Architecture:</strong> By not transmitting personal data over any network, we eliminate entire categories of remote attack vectors including man-in-the-middle attacks, server breaches, and data interception</li>
+    <li><strong>No Remote Attack Surface:</strong> Since we operate no servers, APIs, or cloud infrastructure, there are no remote endpoints that could be compromised, hacked, or subpoenaed</li>
+    <li><strong>OS-Level Application Sandboxing:</strong> The App's data container is isolated from all other applications by the operating system's mandatory access controls</li>
+    <li><strong>Hardware-Backed Encryption:</strong> Device-level encryption protects all App data at rest using keys tied to the device's secure hardware</li>
+    <li><strong>Biometric Protection:</strong> Optional Face ID, Touch ID, and fingerprint protection leveraging the device's Secure Enclave / TEE hardware</li>
+    <li><strong>No Persistent Network Connections:</strong> The App does not maintain background network connections, WebSocket connections, or periodic server check-ins (except when you actively use optional AI features)</li>
+  </ul>
+
+  <h2>9. International Data Transfers</h2>
+  <p>Your data resides on your physical device and does <strong>not</strong> leave it except in the following explicitly user-initiated scenarios:</p>
+  <ul>
+    <li>When you manually export a backup or Markdown file and choose to share it via email, messaging, or cloud storage</li>
+    <li>When you actively use the optional AI features, in which case only the specific note content being analyzed is transmitted directly to your chosen AI provider's servers (which may be located in various countries depending on the provider)</li>
+  </ul>
+  <p>There are no automatic data transfers, no background uploads, no telemetry, no crash reporting, and no cross-device synchronization.</p>
+
+  <h2>10. Legal Basis for Processing (GDPR)</h2>
+  <p>For users in the European Economic Area (EEA), United Kingdom, and other jurisdictions that require a legal basis for data processing:</p>
+  <p>Since Notivation processes all data locally on your device and we do not collect, access, or process your personal data on any server, the traditional GDPR controller/processor framework has limited applicability. Nonetheless:</p>
+  <ul>
+    <li><strong>Consent:</strong> If you enable optional AI features, your use constitutes consent to transmit specific note content to your chosen AI provider</li>
+    <li><strong>Legitimate Interest:</strong> Local storage of your preferences and settings is necessary for the App to function as expected</li>
+    <li><strong>Contract Performance:</strong> Processing of in-app purchase status is necessary to deliver the Pro features you have purchased</li>
+  </ul>
+
+  <h2>11. Your Privacy Rights</h2>
+  <p>Because Notivation stores all data locally on your device and we do not collect or process your personal data on our servers, you inherently enjoy the fullest extent of privacy rights:</p>
+  <ul>
+    <li><strong>Right of Access:</strong> You have immediate, unrestricted, and complete access to all your data at all times through the App and its export features</li>
+    <li><strong>Right to Data Portability:</strong> You can export all your data in open, machine-readable formats (JSON, Markdown) at any time</li>
+    <li><strong>Right to Erasure:</strong> You can delete any individual item or all data instantly and permanently through the App's interface and settings</li>
+    <li><strong>Right to Rectification:</strong> You can edit, modify, and correct any of your content at any time without restriction</li>
+    <li><strong>Right to Restriction of Processing:</strong> You can disable any optional feature (AI, notifications, biometrics) at any time</li>
+    <li><strong>No Consent Withdrawal Needed:</strong> Since we do not process your data on our systems, there is no ongoing data processing consent to withdraw</li>
+  </ul>
+
+  <h2>12. California Privacy Rights (CCPA/CPRA)</h2>
+  <p>For California residents: Notivation does not sell, share, or disclose your personal information to third parties for monetary or other valuable consideration. Since we do not collect personal information, the categories of data collection, sale, and disclosure as defined under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA) are not applicable.</p>
+
+  <h2>13. Changes to This Privacy Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in our practices, features, or applicable laws. When we make changes:</p>
+  <ul>
+    <li>We will update the "Last updated" date at the top of this page</li>
+    <li>For significant changes, we may provide notice within the App</li>
+    <li>Continued use of the App after changes are posted constitutes your acceptance of the revised Privacy Policy</li>
+  </ul>
+  <p>We encourage you to review this policy periodically to stay informed about how we protect your information.</p>
+
+  <h2>14. Contact Us</h2>
+  <p>If you have any questions, concerns, suggestions, or requests regarding this Privacy Policy, your data, or our privacy practices, please do not hesitate to contact us:</p>
+
+  <div class="contact">
+    <p><strong>Notivation</strong></p>
+    <p>Email: <a href="mailto:g.alpatar@gmail.com">g.alpatar@gmail.com</a></p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 Notivation. All rights reserved.</p>
+</div>
+
+</body>
+</html>

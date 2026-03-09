@@ -1,0 +1,10 @@
+Yang baru di Notivation 1.0:
+
+- Asisten AI: Hubungkan Gemini, OpenAI, atau Claude untuk ringkasan cerdas, saran tag, dan analisis keputusan
+- 10 Tema Indah: Terang, Gelap, OLED, Hangat, Samudra, Hutan, Senja, Anak-anak, Lansia, Minimal
+- Dasbor Ringkasan Pagi dengan Skor Kejernihan dan Pelacakan Momentum
+- Alat keputusan dengan Analisis Pro/Kontra dan Kalibrasi Kepercayaan Diri
+- Canvas Peta Pikiran
+- Future Cast perencanaan skenario
+- Dukungan 37 bahasa
+- Keamanan biometrik dengan brankas terenkripsi

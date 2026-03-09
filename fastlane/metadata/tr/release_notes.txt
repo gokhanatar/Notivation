@@ -1,0 +1,10 @@
+Notivation 1.0'daki yenilikler:
+
+- Yapay Zeka Asistanı: Gemini, OpenAI veya Claude ile akıllı özetler, etiket önerileri ve karar analizi
+- 10 Güzel Tema: Açık, Koyu, OLED, Sıcak, Okyanus, Orman, Gün Batımı, Çocuk, Kıdemli, Minimal
+- Sabah Brifingi: Netlik Puanı ve Momentum takibi
+- Artı/Eksi Analizi ve Güven Kalibrasyonu ile karar araçları
+- Tuval Zihin Haritası ile görsel not düzenleme
+- Gelecek Tahmini senaryo planlama
+- 37 dil desteği
+- Şifreli kasa ile biyometrik güvenlik

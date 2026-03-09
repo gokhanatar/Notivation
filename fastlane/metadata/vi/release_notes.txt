@@ -1,0 +1,10 @@
+Có gì mới trong Notivation 1.0:
+
+- Trợ lý AI: Kết nối Gemini, OpenAI hoặc Claude để tóm tắt thông minh, gợi ý thẻ và phân tích quyết định
+- 10 Chủ đề đẹp: Sáng, Tối, OLED, Ấm, Đại dương, Rừng, Hoàng hôn, Trẻ em, Người lớn tuổi, Tối giản
+- Bảng điều khiển Bản tin buổi sáng với Điểm sáng suốt và Theo dõi động lực
+- Công cụ quyết định với Phân tích ưu nhược điểm và Hiệu chuẩn độ tin cậy
+- Canvas Bản đồ tư duy
+- Dự báo tương lai
+- Hỗ trợ 37 ngôn ngữ
+- Bảo mật sinh trắc học với kho mã hóa

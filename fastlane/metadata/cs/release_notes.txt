@@ -1,0 +1,10 @@
+Novinky v Notivation 1.0:
+
+- AI asistent: Připojte Gemini, OpenAI nebo Claude pro chytré souhrny, návrhy štítků a analýzu rozhodnutí
+- 10 nádherných motivů: Světlý, Tmavý, OLED, Teplý, Oceán, Les, Západ slunce, Dětský, Seniorský, Minimální
+- Dashboard ranního přehledu se skóre jasnosti a sledováním momentu
+- Nástroje pro rozhodování s analýzou kladů/záporů a kalibrací důvěry
+- Plátno pro myšlenkové mapy a vizuální organizaci poznámek
+- Budoucí projekce pro plánování scénářů
+- Podpora 37 jazyků
+- Biometrické zabezpečení s šifrovaným trezorem

@@ -1,0 +1,111 @@
+# ============================================================
+# Notivation — Fastlane Deliver Configuration
+# App Store Connect submission — everything except "Submit for Review"
+# ============================================================
+
+# --- App Identity ---
+app_identifier "com.mindfulnotes.app"
+username(ENV["APPLE_ID"] || "")
+
+# --- IPA Path ---
+# IPA is specified per-lane in Fastfile (not here) to avoid path issues
+
+# --- App Information ---
+primary_category "UTILITIES"
+secondary_category "PRODUCTIVITY"
+
+# --- Pricing ---
+# price_tier removed — Apple's new API deprecated this field.
+# Set pricing in App Store Connect manually (app is Free, monetized via IAP).
+
+# --- App Rating ---
+app_rating_config_path "./fastlane/rating_config.json"
+
+# --- Copyright ---
+copyright "2026 Notivation"
+
+# --- URLs ---
+# These MUST be filled with your actual URLs before upload
+support_url({
+  "default" => "https://owebsite.wordpress.com/contact/",
+})
+marketing_url({
+  "default" => "https://owebsite.wordpress.com/notivation-privacy-policy-terms-and-services/",
+})
+privacy_url({
+  "default" => "https://owebsite.wordpress.com/notivation-privacy-policy-terms-and-services/",
+})
+
+# --- Review Information ---
+app_review_information(
+  first_name: ENV["REVIEW_FIRST_NAME"] || "Gökhan Alp",
+  last_name: ENV["REVIEW_LAST_NAME"] || "Atar",
+  phone_number: ENV["REVIEW_PHONE"] || "+905454073371",
+  email_address: ENV["REVIEW_EMAIL"] || "g.alpatar@gmail.com",
+  demo_user: "",
+  demo_password: "",
+  notes: <<~NOTES
+    ABOUT THE APP
+    Notivation is an offline-first note-taking and decision-tracking app. It stores
+    all data locally on the device using IndexedDB. There is no backend server, no
+    cloud sync, no user accounts, and no data collection of any kind.
+
+    AUTHENTICATION
+    The app uses device-local biometric authentication (Face ID / Touch ID) only for
+    the optional Vault feature. There are no user accounts, no sign-in screens, and
+    no passwords. Reviewers do not need any credentials to use the app.
+
+    PROMO CODE SYSTEM (Web Only)
+    The app includes a promo code input field in the Pro upgrade modal. This is the
+    web-based promotional system for testing and special offers. On iOS, all Pro
+    features are gated behind the In-App Purchase subscriptions. The promo code field
+    is hidden on native iOS builds. If visible during review, it is a secondary
+    mechanism and does not bypass IAP — the StoreKit subscription is the sole
+    monetization path on iOS.
+
+    AI ASSISTANT FEATURE
+    The AI Assistant is a Pro feature that allows users to connect their own API key
+    from Google Gemini, OpenAI, or Anthropic Claude. The app makes direct API calls
+    to these providers using the user's key. The developer does not provide, store,
+    or have access to these API keys. Keys are stored locally in the device's
+    IndexedDB. This feature is optional and the app is fully functional without it.
+
+    SUBSCRIPTIONS
+    - Pro Monthly ($3.99/month) with 7-day free trial
+    - Pro Yearly ($29.99/year) with 7-day free trial
+    Both are auto-renewable subscriptions managed through StoreKit.
+
+    OFFLINE OPERATION
+    The app works entirely offline. No internet connection is required for any core
+    functionality. Internet is only needed for the optional AI Assistant feature
+    (user-provided API key) and for In-App Purchase verification.
+
+    ENCRYPTION
+    The app uses standard IndexedDB storage encryption provided by iOS for the Vault
+    feature. No custom cryptographic algorithms are implemented.
+
+    SUPPORTED LANGUAGES
+    37 languages: English, Turkish, Spanish, French, German, Portuguese, Russian,
+    Chinese, Japanese, Korean, Arabic, Hindi, Italian, Dutch, Polish, Ukrainian,
+    Vietnamese, Thai, Indonesian, Malay, Swedish, Danish, Norwegian, Finnish, Czech,
+    Slovak, Hungarian, Romanian, Bulgarian, Greek, Hebrew, Persian, Bengali, Tamil,
+    Urdu, Swahili, and Afrikaans.
+  NOTES
+)
+
+# --- Submission ---
+# Do NOT auto-submit — user will manually press "Submit for Review"
+submit_for_review false
+automatic_release false
+phased_release true
+
+# --- What to skip ---
+skip_binary_upload false
+skip_screenshots false
+skip_metadata false
+overwrite_screenshots true
+run_precheck_before_submit true
+precheck_include_in_app_purchases false
+
+# --- Force ---
+force true  # Skip HTML preview confirmation

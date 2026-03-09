@@ -1,0 +1,10 @@
+Újdonságok a Notivation 1.0-ban:
+
+- AI asszisztens: Csatlakoztatsd a Geminit, OpenAI-t vagy Claude-ot okos összefoglalókhoz, címke-javaslatokhoz és döntéselemzéshez
+- 10 gyönyörű téma: Világos, Sötét, OLED, Meleg, Óceán, Erdő, Naplemente, Gyerek, Senior, Minimalista
+- Reggeli összefoglaló irányítópult tisztasági pontszámmal és lendületkövetéssel
+- Döntéshozatali eszközök érv/ellenérv elemzéssel és bizalomkalibrálással
+- Vászon gondolattérkép vizuális jegyzetszervezéshez
+- Jövőkép forgatókönyv-tervezés
+- 37 nyelv támogatása
+- Biometrikus biztonság titkosított széffel
